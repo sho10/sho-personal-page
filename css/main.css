@@ -1,0 +1,24 @@
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.container {
+  align-items: center;
+}
+
+.avatar-large {
+  border-radius: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1 {
+  font-family: 'Noto Sans TC', sans-serif;
+}
