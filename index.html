@@ -41,6 +41,7 @@
     <h2>Tokyo, Japan</h2>
     <h3>My projects</h3>
     <a href="https://mister-cocktail-sho.herokuapp.com/">Mister Rails Cocktails</a>
+    <a href="https://woofer-project.herokuapp.com/">Woofer</a>
   </div>
 <!--      <div class="player-box">
        <div class="player">
@@ -56,14 +57,62 @@
        <button data-skip="-10" class="player__button">« 10s</button>
        <button data-skip="25" class="player__button">25s »</button>
      </div> -->
+  <table class="racer-table">
+        <tr id="player1-race">
+          <td class="active"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="finish"></td>
+        </tr>
+        <tr id="player2-race">
+          <td class="active"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="finish"></td>
+        </tr>
+      </table>
 
-
-   </div>
+<!--    </div> -->
   <div class = "people"></div>
 
- </div>
-  <script>
 
+  <script>
+    const moveForward = (player) => {
+      const wagon = document.querySelector(`#player${player}-race .active`);
+      if (wagon.nextElementSibling) {
+        wagon.nextElementSibling.classList.add('active');
+        wagon.classList.remove('active');
+      } else {
+        alert(`Player ${player} wins! Play again?`);
+        window.location.reload();
+      }
+    };
+
+    const moveWagons = (event) => {
+      if (event.key === "q") {
+        moveForward(1);
+      } else if (event.key === "p") {
+        moveForward(2);
+      }
+    };
+
+    document.addEventListener("keyup", moveWagons);
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
