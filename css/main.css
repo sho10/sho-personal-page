@@ -17,37 +17,49 @@ h2 {
   font-family: "Work Sans", "Helvetica", "sans-serif";
   font-size: 1.5rem;
   color:#C1EFFF;
-  opacity: .7;
+  /*opacity: .7;*/
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   /*padding-bottom: 3rem;*/
 }
 
 p {
   margin: 0;
+  color:#C1EFFF;
 }
 
 h1 {
   font-family: "Work Sans", "Helvetica", "sans-serif";
   font-size: 3rem;
   color:#9ED2C6;
-  opacity: .7;
+  /*opacity: .7;*/
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
 h3 {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 2rem;
   color:#C1EFFF;
-  opacity: .7;
+  /*opacity: .7;*/
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.bottom-pad {
+  margin-bottom: 10px;
+}
+
+.padding {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .cards {
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
-  margin-bottom: 20px;
+  grid-gap: 50px;
+  margin-bottom: 50px;
 }
 
 .projects-main {
